@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CardPicker"
+    tools:layout_editor_absoluteY="81dp">
+
+    <Button
+        android:id="@+id/button_cardPicker_pickButton"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="GENERATE CARD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_cardPicker_card"
+        android:layout_width="113dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_cardPicker_down"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView_cardPicker_up"
+        app:layout_constraintTop_toBottomOf="@+id/button_cardPicker_pickButton"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+    <ImageView
+        android:id="@+id/imageView_cardPicker_cardback"
+        android:layout_width="85dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_cardPicker_card"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView_cardPicker_card"
+        app:layout_constraintTop_toBottomOf="@+id/button_cardPicker_pickButton"
+        app:srcCompat="@drawable/cardback" />
+
+    <Button
+        android:id="@+id/button_cardPicker_finalAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="FINAL ANSWER"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_cardPicker_right" />
+
+    <EditText
+        android:id="@+id/editText_cardPicker_choice"
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Make your guess"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_cardPicker_finalAnswer" />
+
+    <TextView
+        android:id="@+id/textView_cardPicker_help"
+        android:layout_width="18dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="?"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_cardPicker_up"
+        android:layout_width="67dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/imageView_cardPicker_cardback"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_cardPicker_cardback"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_cardPicker_cardback"
+        app:srcCompat="@drawable/higher" />
+
+    <ImageView
+        android:id="@+id/imageView_cardPicker_down"
+        android:layout_width="67dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/imageView_cardPicker_cardback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView_cardPicker_card"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_cardPicker_cardback"
+        app:srcCompat="@drawable/lower" />
+
+    <TextView
+        android:id="@+id/textView_cardPicker_failpoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Failure Points: 20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_cardPicker_choice" />
+
+    <ImageView
+        android:id="@+id/imageView_cardPicker_right"
+        android:layout_width="66dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_cardPicker_cardback"
+        app:srcCompat="@drawable/right" />
+
+</android.support.constraint.ConstraintLayout>
